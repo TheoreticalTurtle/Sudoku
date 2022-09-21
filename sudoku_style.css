@@ -1,0 +1,244 @@
+.sud-square{
+    background-color:white;
+    height: 11.11%;
+    width: 11.11%;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+#confetti-canvas{
+    position: absolute;
+    left:0;
+    top:0;
+    /*height: 100vh;
+    width: 100vw;*/
+    z-index:-999999;
+}
+.sud-solution-error{
+    color:red;
+}
+.sud-grid-1, .sud-grid-3, .sud-grid-5, .sud-grid-7, .sud-grid-9{
+    background-color: #cfcfcf;
+}
+.remaining-num-count{
+    position:relative;
+    left:25%;
+    top:10%;
+    font-size:.7em;
+    color:#878787;
+}
+@media only screen and (min-width: 400px) {
+    .sud-table{
+        width: 95vmin;
+        height: 95vmin;
+    }
+    .sud-tool-table{
+        height: 5em;
+        width: 95vmin;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .sud-table{
+        width: 60vmin;
+        height: 60vmin;
+    }
+    .sud-tool-table{
+        height: 5em;
+        width: 60vmin;
+        cursor: pointer;
+    }
+}
+.sud-table td{
+    border: 2px solid grey;
+}
+.sud-note-table td{
+    border: 0px solid grey;
+    width: 25%;
+    height: 25%;
+    font-size:.75em;
+}
+.sud-square:hover {
+    filter: brightness(0.6);
+}
+    
+.sud-tool-table td{
+    border: 2px solid grey;
+    background-color:white;
+    width: 16%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.sud-tool-table td:hover {
+    filter: brightness(0.6);
+}
+    
+.auto-filled{
+    color: black;
+    font-weight: bold;
+}
+.sud-hover{
+    background-color: #85d8ff !important;
+}
+.num-highlight{
+    background-color: #85d8ff !important;
+}
+.note-highlight{
+    background-color: #85ffd8 !important;
+}
+/********PUZZLE STYLES********/
+    /********ROSE********/
+        .rose{
+            background-color:#FFB3C1;
+            color: #590D22;
+            border: 2px solid #C9184A !important;
+        }
+        .rose.sud-grid-1, .rose.sud-grid-3, .rose.sud-grid-5, .rose.sud-grid-7, .rose.sud-grid-9{
+            background-color: #FF4D6D;
+        }
+        .rose.sud-hover{
+            background-color: #FFF0F3 !important;
+        }
+        .rose.num-highlight{
+            background-color: #FFF0F3 !important;
+        }
+        .rose .note-highlight{
+            background-color: #FFF0F3 !important;
+        }
+        .rose .sud-note-table td{
+            color: #590D22;
+        }
+    /********FOREST********/
+        .forest{
+            background-color: #466b3b;
+            color: white;
+            border: 2px solid #3c3d28 !important;
+        }
+        .forest.sud-grid-1, .forest.sud-grid-3, .forest.sud-grid-5, .forest.sud-grid-7, .forest.sud-grid-9{
+            background-color: #344f2c;
+        }
+        .forest.sud-hover{
+            background-color: #7ea174 !important;
+        }
+        .forest.num-highlight{
+            background-color: #7ea174 !important;
+        }
+        .forest .note-highlight{
+            background-color: #7ea174 !important;
+        }
+        .forest .sud-note-table td{
+            color: white;
+        }
+    /********TEA********/
+        .tea{
+            background-color: #9fd496;
+            color: white;
+        }
+        .tea.sud-grid-1, .tea.sud-grid-3, .tea.sud-grid-5, .tea.sud-grid-7, .tea.sud-grid-9{
+            background-color: #75a36d;
+        }
+        .tea.sud-hover{
+            background-color: #a4b5a1 !important;
+        }
+        .tea.num-highlight{
+            background-color: #a4b5a1 !important;
+        }
+        .tea .note-highlight{
+            background-color: #a4b5a1 !important;
+        }
+        .tea .sud-note-table td{
+            color: white;
+        }
+    /********DARK********/
+        .dark{
+            background-color: #787878;
+            color: black;
+            border: 2px solid black !important;
+        }
+        .dark.sud-grid-1, .dark.sud-grid-3, .dark.sud-grid-5, .dark.sud-grid-7, .dark.sud-grid-9{
+            background-color: #4d4d4d;
+        }
+        .dark.sud-hover{
+            background-color: #b3b3b3 !important;
+        }
+        .dark.num-highlight{
+            background-color: #b3b3b3 !important;
+        }
+        .dark .note-highlight{
+            background-color: #b3b3b3 !important;
+        }
+        .dark .sud-note-table td{
+            color: black;
+        }
+    /********RAINBOW********/
+        .rainbow{
+            background-color: #787878;
+            color: black;
+            border: 1px solid white !important;
+        }
+        .rainbow.sud-grid-1{
+            background-color: #FF9898;
+        }
+        .rainbow.sud-grid-2{
+            background-color: #FFCC8E;
+        }
+        .rainbow.sud-grid-3{
+            background-color: #FCFFA2;
+        }
+        .rainbow.sud-grid-4{
+            background-color: #B5FFA7;
+        }
+        .rainbow.sud-grid-5{
+            background-color: #85F5FF;
+        }
+        .rainbow.sud-grid-6{
+            background-color: #71D6EA;
+        }
+        .rainbow.sud-grid-7{
+            background-color: #89B7FF;
+        }
+        .rainbow.sud-grid-8{
+            background-color: #AC9DFF;
+        }
+        .rainbow.sud-grid-9{
+            background-color: #FFB0FF;
+        }
+        .rainbow.sud-hover{
+            background-color: #707070 !important;
+        }
+        .rainbow.num-highlight{
+            background-color: #707070 !important;
+        }
+        .rainbow .note-highlight{
+            background-color: #121212 !important;
+            color: #FEFEFE !important;
+        }
+        .rainbow .note-highlight .sud-note-table td{
+            color: #FFFFFF !important;
+        }
+.sud-solution-error{
+    color:red !important;
+}
+
+.coolors-palette-widget {
+    all: initial;
+    background: #fff;
+    display: block;
+    overflow: hidden;
+}
+.coolors-palette-widget .coolors-palette-widget_colors {
+    display: flex;
+    width: 100%;
+    height: 20px;
+}
+.coolors-palette-widget .coolors-palette-widget_colors div {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    flex-basis: 1px;
+}
+.coolors-palette-widget .coolors-palette-widget_colors div:first-child {
+    border-radius: 50px 0% 0% 50px;
+}
+.coolors-palette-widget .coolors-palette-widget_colors div:last-child {
+    border-radius: 0% 50px 50px 0%;
+}
